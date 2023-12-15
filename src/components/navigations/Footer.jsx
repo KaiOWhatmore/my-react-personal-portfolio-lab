@@ -8,9 +8,9 @@ function Footer() {
         <footer >
             <div className="footer">
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link href="/AboutUs">About Us</Link></li>
-                    <li><Link to="/ContactUs">Contact Us</Link></li>
+                    <li><Link to="/home">Home</Link></li>
+                    <li><Link to="/about">About Me</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
 
                 <ul className="social">
@@ -31,7 +31,7 @@ function Footer() {
                     </li>
                 </ul>
 
-                <p>&copy; Your Name/Company. All rights reserved.</p>
+                <p>&copy;  Kai Whatmor.  Always curious, always learning</p>
             </div>
         </footer>
     )

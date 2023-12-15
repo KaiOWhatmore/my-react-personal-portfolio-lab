@@ -22,18 +22,16 @@ function Navbar() {
     <nav className={styles.navbar}>
 
       {/* logo */}
-      <Link to="/" className={styles.logo}>Kai</Link> 
-      {/* <a href='#home' className={styles.logo}>Dev. </a> */}
-
+      <Link to="/home" className={styles.logo}>Kai</Link> 
       <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
         <li onClick={removeActive}>
           <Link to="/home" className={styles.navLink}>Home</Link>
         </li>
         <li onClick={removeActive}>
-          <Link to="/catalog" className={styles.navLink}>Catalog</Link>
+          <Link to="/about" className={styles.navLink}>About Me</Link>
         </li>
         <li onClick={removeActive}>
-          <Link to="/all-products" className={styles.navLink}>All products</Link>
+          <Link to="/books" className={styles.navLink}>Books</Link>
         </li>
         <li onClick={removeActive}>
           <Link to="/contact" className={styles.navLink}>Contact</Link>
