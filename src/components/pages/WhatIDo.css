@@ -1,0 +1,31 @@
+.what-i-do-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Adjust this to control how it's centered vertically */
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-weight: lighter;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .icons {
+    /* If your icons are from FontAwesome, for example, you might style the i elements */
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap as needed */
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
