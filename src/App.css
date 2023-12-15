@@ -1,3 +1,7 @@
+:root { 
+  --primary-color: rgb(78, 108, 226);
+}
+
 .App {
     display: flex;
     flex-direction: column;
