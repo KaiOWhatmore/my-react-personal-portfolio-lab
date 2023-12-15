@@ -18,6 +18,7 @@
     justify-content: center;
     gap: 10px; /* Adjust the gap as needed */
     margin-bottom: 20px; /* Adjust as needed */
+    font-size: 60px;
   }
   
   ul {

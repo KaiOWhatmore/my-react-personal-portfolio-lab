@@ -5,11 +5,13 @@ const WhatIDo = () => {
   return (
     <div className="what-i-do-container">
       <h1>What I Do</h1>
-      <p className="subtitle">SELF TAUGHT CRAZY DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
+      <p className="subtitle">SELF TAUGHT DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
       <div className="icons">
         {/* Replace 'faJava' with the correct class names for your icons */}
-        <i className="faJava"></i>
-        <i className="faPython"></i>
+        <i className="fab fa-java"></i>
+        <i className="fab fa-python"></i>
+        <i className="fas fa-database"></i>
+        <i className="fab fa-docker"></i>
         {/* ... all your other icons */}
       </div>
       <ul>

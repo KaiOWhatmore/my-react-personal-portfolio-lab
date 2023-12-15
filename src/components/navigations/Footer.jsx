@@ -31,7 +31,7 @@ function Footer() {
                     </li>
                 </ul>
 
-                <p>&copy;  Kai Whatmor.  Always curious, always learning</p>
+                <p>&copy;  Kai Whatmore.  Always curious, always learning</p>
             </div>
         </footer>
     )
