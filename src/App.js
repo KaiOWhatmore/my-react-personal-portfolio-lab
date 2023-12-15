@@ -11,6 +11,7 @@ function App() {
         <Route path="/catalog" element={<div><h1>Catalog Us</h1><p>Learn more about us here.</p></div>} />
         <Route path="/contact" element={<div><h1>Contact Us</h1><p>Get in touch with us.</p></div>} />
       </Routes>
+      <Footer />
     </div>
   );
 }
