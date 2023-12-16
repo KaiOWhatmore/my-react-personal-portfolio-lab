@@ -1,0 +1,22 @@
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 50px;
+  }
+  
+  .book {
+    border: 1px solid #4947b9;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .book img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+  
+  /* Add additional styling as necessary */
+  

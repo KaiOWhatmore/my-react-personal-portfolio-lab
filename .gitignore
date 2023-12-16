@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/src/components/misc/hardcover-react-screenshot-to-code.jsx.temp
 
 # testing
 /coverage

@@ -1,10 +1,11 @@
 import Navbar from './components/navigations/Navbar';
-import Footer from './components/navigations/Footer'
+import Footer from './components/navigations/Footer';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import AboutMe from './components/pages/AboutMe';
-import Header from './components/misc/Header';
-import WhatIDo from './components/pages/WhatIDo';
+import Home from './components/pages/Home';
+import BookGrid from './components/books/BookGrid';
+
 
 function App() {
   return (
@@ -12,10 +13,9 @@ function App() {
       <Navbar />
       <main>
         <Routes>
-          <Route path="/home" element={<Header/>} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/about" element={<AboutMe/>} />
-          <Route path="/what-i-do" element={<WhatIDo/>}/>
-          <Route path="/books" element={<div><h1>Books Page</h1><p>Ah, the wonderful world of books</p></div>} />
+          <Route path="/books" element={<BookGrid/>}/>
           <Route path="/contact" element={<div><h1>Contact Us</h1><p>Get in touch with us.</p></div>} />
         </Routes>
       </main>

@@ -3,30 +3,96 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Adjust this to control how it's centered vertically */
+    min-height: 70vh;
+    /* Adjust this to control how it's centered vertically */
     text-align: center;
-  }
-  
-  .subtitle {
-    font-weight: lighter;
-    margin-bottom: 20px; /* Adjust as needed */
-  }
-  
-  .icons {
+}
+
+.header {
+    margin-bottom: 10px
+}
+
+.subtitle {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.icons {
     /* If your icons are from FontAwesome, for example, you might style the i elements */
     display: flex;
     justify-content: center;
-    gap: 10px; /* Adjust the gap as needed */
-    margin-bottom: 20px; /* Adjust as needed */
-    font-size: 60px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin-bottom: 10px; /* Adjust as needed */
-  }
-  
+    gap: 1rem;
+    color: rgb(45, 64, 101);
+    margin-bottom: 20px;
+    font-size: 4.5rem;
+}
+
+
+.professional-spiel li {
+    /* list-style: cric; */
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* YourComponent.css */
+.custom-java:hover {
+    color: red;
+    /* Java color, just an example, change to whatever you want */
+}
+
+.custom-python:hover {
+    color: #3572A5;
+    /* Python color, for example */
+}
+
+.custom-database:hover {
+    color: #006488;
+    /* Some database color, as an example */
+}
+
+.custom-docker:hover {
+    color: #2496ED;
+    /* Docker's color, for example */
+}
+
+.custom-spring:hover {
+    color: #24ed9d;
+    /* Docker's color, for example */
+}
+
+.custom-maven:hover {
+    color: #bb24ed;
+    /* Docker's color, for example */
+}
+
+.custom-aws:hover {
+    color: #d6de42;
+    /* Docker's color, for example */
+}
+
+.custom-terminal:hover {
+    color: #000000;
+    /* Docker's color, for example */
+}
+
+.line-separator {
+    border: none;
+    height: 1px;
+    background-color: #333;
+    /* Or any color you prefer */
+    margin: 20px 0;
+    /* Adds vertical space around the <hr/> */
+    width: 35%;
+    /* Ensures it spans the full width of its container */
+}
+
+.other-interests p {
+    /* list-style: circle; */
+    padding: 10px;
+}
+
+.other-interests li {
+    /* list-style: circle; */
+    padding: 10px;
+    font-size: 20px;
+}

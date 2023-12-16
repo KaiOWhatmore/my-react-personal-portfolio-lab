@@ -1,29 +1,39 @@
-header{
-    color: white;
-    background: #37387a;
-    background-image: url('../../images/space.jpg');
+.bg-image {
+    background-image: url('../../images/beach-folio.jpg');
     min-height: 50vh;
     padding-top: 20vh;
     text-align: center;
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 }
-  
-header h1{
+
+.bg-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bg-container h1, 
+.bg-container h2 {
+    color: #fff;
+    text-shadow: 0 0 0.25em black;
+}
+
+
+.bg-container h1 {
     font-size: 3rem;
     margin: 0 0 1rem;
 }
 
-header h2{
+.bg-container h2 {
     font-weight: 300;
     font-size: 1.5rem;
     margin: 0 0 1rem;
-}
-
-header a{
-    color: #ffff;
 }
