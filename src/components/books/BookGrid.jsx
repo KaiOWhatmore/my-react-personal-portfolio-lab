@@ -1,9 +1,7 @@
 // components/BookGrid.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Book from "./Book";
-import booksDummyData from "./booksDummyData";
 import Papa from "papaparse";
-import Book from "./Book";
 
 // Custom hook for fetching book data
 const useBookData = () => {
