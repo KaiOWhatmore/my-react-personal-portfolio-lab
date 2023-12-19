@@ -1,14 +1,24 @@
-import React from 'react';
-import './Book.css';
+import React from "react";
+import "./Book.css";
+import Rating from "./Rating";
 
-const Book = ({ title, author, dateRead, imageUrl }) => (
+// Book component
+
+const Book = ({
+  title,
+  author,
+  googleid,
+  imageUrl,
+  "end date": endDate,
+  rating,
+}) => (
   <div className="book">
     <img src={imageUrl} alt={imageUrl} />
-    <h2>{title}</h2>
+    <h3>{title}</h3>
     <p>{author}</p>
-    <p>{dateRead}</p>
+    <p>googleid: {googleid}</p>
+    <p>{<Rating rating={rating} />}</p>
   </div>
 );
 
 export default Book;
-
