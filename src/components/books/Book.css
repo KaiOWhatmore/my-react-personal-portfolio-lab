@@ -1,13 +1,16 @@
 .book-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 200px);
     gap: 40px;
     padding: 50px;
   }
   
   .book {
-    border: 1px solid #4947b9;
-    border-radius: 8px;
+    color: aliceblue;
+    border: 1px solid #7876c6;
+    background-color: var(--primary-color);
+    border-radius: 10px;
     padding: 16px;
     text-align: center;
   }
