@@ -1,4 +1,3 @@
-// components/BookGrid.js
 import React, { useState, useEffect } from "react";
 import Book from "./Book";
 import Papa from "papaparse";
@@ -24,20 +23,51 @@ const useBookData = () => {
 
 const BookGrid = () => {
   const books = useBookData();
+  const [selectedRating, setSelectedRating] = useState("All");
 
-  // Sort the books by rating
-  const sortedBooksByRating = [...books].sort((a, b) => b.rating - a.rating);
+  const handleRatingChange = (event) => {
+    setSelectedRating(event.target.value);
+  };
 
+  // Filter the books by rating
+  const filteredBooks = books.filter((book) => {
+    return selectedRating === "All" || book.rating === selectedRating;
+  });
+
+  // Sort the filtered books by rating
+  const sortedBooksByRating = [...filteredBooks].sort(
+    (a, b) => b.rating - a.rating
+  );
+
+  // Only show books with "read" status
   const readBooks = sortedBooksByRating.filter(
     (book) => book["read status"] === "read"
   );
+
   // Render the book grid
   return (
-    <div className="book-grid">
-      {readBooks.map((book, index) => (
-        <Book key={index} {...book} />
-      ))}
-    </div>
+    <>
+      <div>
+        <label htmlFor="rating-filter">Filter by Rating: </label>
+        <select
+          id="rating-filter"
+          onChange={handleRatingChange}
+          value={selectedRating}
+        >
+          <option value="All">All</option>
+          {[...Array(5)].map((_, i) => (
+            <option key={i} value={i + 1}>
+              {i + 1} Stars
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="book-grid">
+        {readBooks.map((book, index) => (
+          <Book key={index} {...book} />
+        ))}
+      </div>
+    </>
   );
 };
 
