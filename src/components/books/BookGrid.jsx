@@ -23,16 +23,21 @@ const useBookData = () => {
 
 const BookGrid = () => {
   const books = useBookData();
-  const [selectedRating, setSelectedRating] = useState("All");
+  const [selectedRatings, setSelectedRatings] = useState([]);
 
-  const handleRatingChange = (event) => {
-    setSelectedRating(event.target.value);
+  const handleRatingChange = (rating) => {
+    setSelectedRatings((prevRatings) =>
+      prevRatings.includes(rating)
+        ? prevRatings.filter((r) => r !== rating)
+        : [...prevRatings, rating]
+    );
   };
 
-  // Filter the books by rating
-  const filteredBooks = books.filter((book) => {
-    return selectedRating === "All" || book.rating === selectedRating;
-  });
+  // Filter the books by selected ratings
+  const filteredBooks = books.filter(
+    (book) =>
+      selectedRatings.length === 0 || selectedRatings.includes(book.rating)
+  );
 
   // Sort the filtered books by rating
   const sortedBooksByRating = [...filteredBooks].sort(
@@ -48,19 +53,18 @@ const BookGrid = () => {
   return (
     <>
       <div>
-        <label htmlFor="rating-filter">Filter by Rating: </label>
-        <select
-          id="rating-filter"
-          onChange={handleRatingChange}
-          value={selectedRating}
-        >
-          <option value="All">All</option>
-          {[...Array(5)].map((_, i) => (
-            <option key={i} value={i + 1}>
-              {i + 1} Stars
-            </option>
-          ))}
-        </select>
+        <label>Filter by Rating:</label>
+        {[...Array(5)].map((_, i) => (
+          <div key={i} className="rating-filter">
+            <input
+              type="checkbox"
+              id={`star-${i + 1}`}
+              checked={selectedRatings.includes(i + 1)}
+              onChange={() => handleRatingChange(i + 1)}
+            />
+            <label htmlFor={`star-${i + 1}`}>{i + 1} Stars</label>
+          </div>
+        ))}
       </div>
       <div className="book-grid">
         {readBooks.map((book, index) => (
