@@ -8,7 +8,7 @@ const useBookData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/output-sorted-read.csv") // Adjust the path if necessary
+    fetch("/read_with_thumbnail_urls.csv") // Adjust the path if necessary
       .then((response) => response.text())
       .then((csvString) => {
         const parsedData = Papa.parse(csvString, {
