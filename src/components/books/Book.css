@@ -1,6 +1,7 @@
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Creates more columns on larger screens and ensures each column is at least 180px wide */
+    /* grid-template-columns: repeat(4, 1fr); */
     /* grid-template-rows: repeat(4, 200px); */
     grid-auto-rows: minmax(100px, auto); /* this will do the magic */
     gap: 40px;
