@@ -56,6 +56,29 @@ const BookGrid = () => {
   // Render the book grid
   return (
     <>
+      <div className="books-header">
+        <h2>Books</h2>
+        <p>
+          I didn't really start reading when at 23 I returned from a three year
+          shoestring backpacking whirlwind and picked up a copy of On The Road.
+          Ever since then I've had an unhealthy addiction to reading. My
+          intersts are spread wide and far. Upon writing this I've descended
+          down the rabbit hole of macro-economics and finance.
+        </p>
+        <p>
+          I once heard a recruiter say reading isn't worth mentioning on a CV or
+          to a potential employer. Since I've dedicated a whole page to what I
+          read, I guess I've taken his advice to heart.
+        </p>
+        <p>
+          Jokes aside, I spend a stupid amount of my spare time reading and it's
+          where I develop my interests which influence my career, my interests
+          and my life decisions, so if by a miracle you're still reading this, I
+          hope you see a book you like and think we think alike and could work
+          together.
+        </p>
+      </div>
+
       <div className="filter-bar">
         <label className="filter-label">Filter by Rating:</label>
         <div className="rating-filters">
