@@ -22,9 +22,10 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    color: rgb(45, 64, 101);
+    color: rgb(58, 70, 94);
     margin-bottom: 20px;
-    font-size: 4.5rem;
+    font-size: 3rem;
+    vertical-align: top;
 }
 
 
@@ -45,7 +46,7 @@
 }
 
 .custom-database:hover {
-    color: #006488;
+    color: #9e9e9e;
     /* If this is for a specific DB, let me know */
 }
 
@@ -70,7 +71,7 @@
 }
 
 .custom-terminal:hover {
-    color: #33FF33;
+    color: #209200;
     /* Classic terminal green */
 }
 
