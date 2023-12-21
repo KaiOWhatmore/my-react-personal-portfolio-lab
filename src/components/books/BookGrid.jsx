@@ -43,17 +43,29 @@ const BookGrid = () => {
     );
   });
 
-  // Sort the filtered books by rating
-  const sortedBooksByRating = [...filteredBooks].sort(
-    (a, b) => b.rating - a.rating
-  );
+  // Multi-level sort by rating, then by end date
+  const sortedBooks = [...filteredBooks]
+    // .filter((book) => book["read status"] === "read")
+    .sort((a, b) => {
+      const ratingDiff = b.rating - a.rating;
+      if (ratingDiff !== 0) return ratingDiff;
 
-  // Only show books with "read" status
-  const readBooks = sortedBooksByRating.filter(
-    (book) => book["read status"] === "read"
-  );
+      const endDateA = new Date(a["end date"]);
+      const endDateB = new Date(b["end date"]);
+      return endDateB - endDateA;
+    });
 
-  // Render the book grid
+  // Group books by year
+  const booksByYear = sortedBooks.reduce((acc, book) => {
+    const year = new Date(book["end date"]).getFullYear();
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(book);
+    return acc;
+  }, {});
+
+  // Render the book grid with year headings
   return (
     <>
       <div className="books-header">
@@ -96,11 +108,19 @@ const BookGrid = () => {
           ))}
         </div>
       </div>
-      <div className="book-grid">
-        {readBooks.map((book, index) => (
-          <Book key={index} {...book} />
+
+      {Object.keys(booksByYear)
+        .sort((a, b) => b - a) // Sort years in descending order
+        .map((year) => (
+          <div key={year}>
+            <h2 className="year-heading">{year}</h2>
+            <div className="book-grid">
+              {booksByYear[year].map((book, index) => (
+                <Book key={index} {...book} />
+              ))}
+            </div>
+          </div>
         ))}
-      </div>
     </>
   );
 };
