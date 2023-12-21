@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Book from "./Book";
 import Papa from "papaparse";
+import "./BookGrid.css";
 
 // Custom hook for fetching book data
 const useBookData = () => {
@@ -34,10 +35,13 @@ const BookGrid = () => {
   };
 
   // Filter the books by selected ratings
-  const filteredBooks = books.filter(
-    (book) =>
-      selectedRatings.length === 0 || selectedRatings.includes(book.rating)
-  );
+  const filteredBooks = books.filter((book) => {
+    // Convert book.rating to a number for comparison, as it's likely a string from CSV
+    const bookRatingNum = Number(book.rating);
+    return (
+      selectedRatings.length === 0 || selectedRatings.includes(bookRatingNum)
+    );
+  });
 
   // Sort the filtered books by rating
   const sortedBooksByRating = [...filteredBooks].sort(
@@ -52,19 +56,22 @@ const BookGrid = () => {
   // Render the book grid
   return (
     <>
-      <div>
-        <label>Filter by Rating:</label>
-        {[...Array(5)].map((_, i) => (
-          <div key={i} className="rating-filter">
-            <input
-              type="checkbox"
-              id={`star-${i + 1}`}
-              checked={selectedRatings.includes(i + 1)}
-              onChange={() => handleRatingChange(i + 1)}
-            />
-            <label htmlFor={`star-${i + 1}`}>{i + 1} Stars</label>
-          </div>
-        ))}
+      <div className="filter-bar">
+        <label className="filter-label">Filter by Rating:</label>
+        <div className="rating-filters">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <div key={star} className="rating-filter">
+              <input
+                className="rating-checkbox"
+                type="checkbox"
+                id={`star-${star}`}
+                checked={selectedRatings.includes(star)}
+                onChange={() => handleRatingChange(star)}
+              />
+              <label htmlFor={`star-${star}`}> {star} Stars </label>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="book-grid">
         {readBooks.map((book, index) => (

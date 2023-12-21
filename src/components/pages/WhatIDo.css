@@ -34,45 +34,44 @@
     padding: 10px;
 }
 
-/* YourComponent.css */
 .custom-java:hover {
     color: red;
-    /* Java color, just an example, change to whatever you want */
+    /* Java's red is classic, keep it if it works for ya */
 }
 
 .custom-python:hover {
-    color: #3572A5;
-    /* Python color, for example */
+    color: #3776AB;
+    /* Python's official blue */
 }
 
 .custom-database:hover {
     color: #006488;
-    /* Some database color, as an example */
+    /* If this is for a specific DB, let me know */
 }
 
 .custom-docker:hover {
     color: #2496ED;
-    /* Docker's color, for example */
+    /* Docker blue is spot on */
 }
 
 .custom-spring:hover {
-    color: #24ed9d;
-    /* Docker's color, for example */
+    color: #6DB33F;
+    /* Spring's official green */
 }
 
 .custom-maven:hover {
-    color: #bb24ed;
-    /* Docker's color, for example */
+    color: #C71A36;
+    /* Maven's red */
 }
 
 .custom-aws:hover {
-    color: #d6de42;
-    /* Docker's color, for example */
+    color: #FF9900;
+    /* AWS's orange */
 }
 
 .custom-terminal:hover {
-    color: #000000;
-    /* Docker's color, for example */
+    color: #33FF33;
+    /* Classic terminal green */
 }
 
 .line-separator {

@@ -1,113 +1,114 @@
-
-
 /* default styling */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  ul {
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* navbar */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  min-height: 70px;
+  z-index: 10;
+  /* Any number greater than 1 should theoretically work */
+}
+
+
+/* logo  */
+.logo {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  margin-left: 20px;
+  font-weight: bold;
+  font-family: 'Bauhaus 93', Arial, Helvetica, sans-serif;
+}
+
+
+/* ul  */
+.navMenu {
+  display: flex;
+  margin-right: 30px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  font-size: 30px;
+}
+
+/* a */
+.navLink {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  opacity: 0.7;
+}
+
+/* media queries */
+
+@media screen and (max-width: 780px) {
+
+  /* hamburger */
+  .hamburger {
+    display: block;
+    cursor: pointer;
   }
 
-  /* navbar */
-  .navbar {
-    background-color: var(--primary-color);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    min-height: 70px;
-    z-index: 10; /* Any number greater than 1 should theoretically work */
+  .bar {
+    background-color: #120f0b;
+    width: 20px;
+    height: 3px;
+    display: block;
+    margin: 5px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
-  
-  
-  /* logo  */
-  .logo {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+
+  /* adding active class to the bars  */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
   }
-  
-  
-  /* ul  */
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+
+  /* navMenu */
+
   .navMenu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-    font-size: 30px;
+    position: absolute;
+    flex-direction: column;
+    gap: 0;
+    top: 70px;
+    left: -100%;
+    text-align: start;
+    width: 100%;
+    transition: 0.7s ease-in-out;
+    background-color: rgb(39, 88, 130);
+    padding: 10px;
   }
 
-  /* a */ 
-  .navLink { 
-    color:rgb(255, 255, 255);
-    text-decoration: none;
+  .navMenu.active {
+    left: 0;
   }
 
-  .navLink:hover { 
-    opacity: 0.7;
+  .navMenu li {
+    margin: 16px 0;
   }
-  
-  /* media queries */
-  
-  @media screen and (max-width: 780px){
-    
-    /* hamburger */
-    .hamburger {
-      display: block;
-      cursor: pointer;
-    }
-  
-    .bar {
-          background-color: #120f0b;
-          width: 20px;
-          height: 3px;
-          display: block;
-          margin: 5px;
-          -webkit-transition: 0.3s ease-in-out;
-          transition: 0.3s ease-in-out;
-      }
-  
-    /* adding active class to the bars  */
-    .hamburger.active .bar:nth-child(2){
-      opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-      transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-      transform: translateY(-8px) rotate(-45deg);
-    }
-  
-  
-    /* navMenu */
-  
-    .navMenu{
-      position: absolute;
-      flex-direction: column;
-      gap: 0;
-      top: 70px;
-      left: -100%;
-      text-align: start;
-      width: 100%;
-      transition: 0.7s ease-in-out;
-      background-color: rgb(39, 88, 130);
-      padding: 10px;
-    }
-  
-    .navMenu.active{
-      left: 0;
-    }
-  
-    .navMenu li {
-      margin: 16px 0;
-    }
-  }
-
-  
+}
