@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.content-container {
+.contentContainer {
     display: flex;
     /* Add this to make it a flex container */
     justify-content: center;
@@ -11,7 +11,7 @@
     /* Centers children vertically */
     margin: 2.5rem auto;
     max-width: 780px;
-    min-height: 50vh;
+    min-height: 60vh;
     padding: 10px;
     /* Default alignment for children */
 }
@@ -27,7 +27,7 @@
     word-wrap: break-word;
 }
 
-.header-and-image {
+.headerAndImage {
     display: flex;
     /* Add this to make it a flex container */
     justify-content: center;
