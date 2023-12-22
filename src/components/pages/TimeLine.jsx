@@ -3,26 +3,59 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import ParentComponent from "./ParentComponent.jsx";
+import "./TimeLine.css";
+import worldline from "../../images/worldline.png";
+
+const techList = [
+  "Java",
+  "Spring",
+  "Maven",
+  "Docker",
+  "Bash",
+  "PL/SQL",
+  "JBoss",
+];
 
 const TimeLine = () => {
   return (
-    <div>
+    <div className="timeline-container">
       <VerticalTimeline lineColor={"black"} layout={"1-column-left"}>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-          date="2011 - present"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          contentStyle={{
+            background: "transparent ",
+            // border: "2px solid rgb(33, 150, 243)", // Adjust border thickness as needed,
+            boxShadow: "0px 0px 10px rgba(33, 150, 243, 0.5)",
+            color: "#fff",
+            marginLeft: "70px",
+            // marginTop: "20px"
+          }}
+          contentArrowStyle={{
+            borderRight: "transparent",
+          }}
+          date="2022-2023"
+          iconStyle={{
+            background: "rgb(33, 150, 243)",
+            color: "#fff",
+            width: "70px",
+            height: "70px",
+            marginLeft: "-15px", // Half of the width to center the icon
+          }}
+          icon={
+            <img
+              src={worldline}
+              alt="worldline"
+              style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+            />
+          }
         >
-          <h3 className="vertical-timeline-element-title">
-            Java Software Developer
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">Sydney</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, Project
-            Management, Team Leading
-          </p>
+          <h3 className="vertical-timeline-element-title">Worldline</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Java Backend Developer
+          </h4>
+          <p>Develoepr Tool Creator, Devops, Avante Gardner </p>
+          <ParentComponent technologies={techList} />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
