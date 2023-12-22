@@ -1,0 +1,50 @@
+  .timeline-container {
+      position: relative;
+      margin: 50px;
+  }
+
+  .timeline-line {
+      position: absolute;
+      width: 2px;
+      background-color: #333;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      transform: translateX(-50%);
+  }
+
+  .timeline-event {
+      position: relative;
+      width: 50%;
+      margin: 10px auto;
+  }
+
+  .event-content {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+  }
+
+  .technologies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+  }
+
+  .tech-badge {
+      display: inline-block;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      background-color: #f0f0f0;
+  }
+
+  .active-time {
+      color: #555;
+      font-style: italic;
+  }

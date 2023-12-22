@@ -9,10 +9,10 @@
     /* Centers children horizontally */
     align-items: center;
     /* Centers children vertically */
-    margin: 2.5rem auto;
+    margin: 1.5rem auto;
     max-width: 780px;
     min-height: 60vh;
-    padding: 10px;
+    padding-top: 20px;
     /* Default alignment for children */
 }
 
@@ -47,7 +47,7 @@
 
 .paragraph {
     font-size: 30px;
-    padding: 10px;
+    padding: 30px;
 }
 
 

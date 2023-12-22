@@ -1,0 +1,41 @@
+.contact-section {
+    /* Example background color */
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section .status {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    font-size: 2rem;
+    /* Size of icons */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* Space between icons */
+}
+
+.social-links a {
+    color: rgb(62, 62, 62);
+    /* Icon color */
+    text-decoration: none;
+    /* Removes underline from icons */
+}
+
+.social-links a:hover {
+    color: #3498db;
+    /* Icon hover color */
+}
