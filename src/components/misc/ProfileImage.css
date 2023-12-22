@@ -1,0 +1,12 @@
+.profile-img {
+    width: 250px;
+    /* adjust as necessary */
+    height: 250px;
+    /* adjust as necessary */
+    border-radius: 40%;
+    /* creates the circular shape */
+    border: 5px solid var(--primary-color);
+    /* adjust color and size as necessary */
+    object-fit: cover;
+    /* ensures the image covers the area without distortion */
+}
