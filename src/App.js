@@ -5,6 +5,7 @@ import './App.css';
 import AboutMe from './components/pages/AboutMe';
 import Home from './components/pages/Home';
 import BookGrid from './components/books/BookGrid';
+import ContactUs from './components/pages/ContactUs';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
           <Route path="/home" element={<Home/>} />
           <Route path="/about" element={<AboutMe/>} />
           <Route path="/books" element={<BookGrid/>}/>
-          <Route path="/contact" element={<div><h1>Contact Us</h1><p>Get in touch with us.</p></div>} />
+          <Route path="/contact" element={<ContactUs/>} />
         </Routes>
       </main>
       <Footer />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./WhatIDo.css"; // Make sure to create this CSS file and import it here
+import { Link } from "react-router-dom";
 
 function WhatIDo() {
   return (
@@ -18,8 +19,8 @@ function WhatIDo() {
         <i className="fab fa-aws custom-aws fa-2x"></i>
         {/* <i className="fas fa-terminal custom-terminal fa-2x"></i> */}
         <span className="fas fa-stack custom-terminal fa-1x">
-          <i class="fas fa-solid fa-square fa-stack-2x"></i>
-          <i class="fas fa-solid fa-terminal fa-stack-1x fa-inverse"></i>
+          <i className="fas fa-solid fa-square fa-stack-2x"></i>
+          <i className="fas fa-solid fa-terminal fa-stack-1x fa-inverse"></i>
         </span>
       </div>
       <ul className="professional-spiel">
@@ -45,7 +46,8 @@ function WhatIDo() {
           </p>
           <li>
             {" "}
-            Reading. And I mean A LOT. See my goodreads [insert link here]{" "}
+            Reading. And I mean A LOT.{" "}
+            <Link to="/books">Check out my DIY made virtual library</Link>
           </li>
           <li>
             {" "}

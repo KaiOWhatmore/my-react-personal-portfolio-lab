@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Book from "./Book";
 import Papa from "papaparse";
 import "./BookGrid.css";
+import Star from "./Star";
 
 // Custom hook for fetching book data
 const useBookData = () => {
@@ -71,7 +72,7 @@ const BookGrid = () => {
       <div className="books-header">
         <h2>Books</h2>
         <p>
-          I didn't really start reading when at 23 I returned from a three year
+          I really started to read at 23 when I returned from a three year
           shoestring backpacking whirlwind and picked up a copy of On The Road.
           Ever since then I've had an unhealthy addiction to reading. My
           intersts are spread wide and far. Upon writing this I've descended
@@ -85,41 +86,44 @@ const BookGrid = () => {
         <p>
           Jokes aside, I spend a stupid amount of my spare time reading and it's
           where I develop my interests which influence my career, my interests
-          and my life decisions, so if by a miracle you're still reading this, I
-          hope you see a book you like and think we think alike and could work
-          together.
+          and my life decisions, so if by some miracle you're still reading
+          this, I hope you see a book you like and think we're alike and could
+          work together.
         </p>
-      </div>
-
-      <div className="filter-bar">
-        <label className="filter-label">Filter by Rating:</label>
-        <div className="rating-filters">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <div key={star} className="rating-filter">
-              <input
-                className="rating-checkbox"
-                type="checkbox"
-                id={`star-${star}`}
-                checked={selectedRatings.includes(star)}
-                onChange={() => handleRatingChange(star)}
-              />
-              <label htmlFor={`star-${star}`}> {star} Stars </label>
-            </div>
-          ))}
-        </div>
       </div>
 
       {Object.keys(booksByYear)
         .sort((a, b) => b - a) // Sort years in descending order
         .map((year) => (
-          <div key={year}>
-            <h2 className="year-heading">{year}</h2>
+          <React.Fragment key={year}>
+            <div className="year-filter-wrapper">
+              <h2 className="year-heading">{year}</h2>
+              <div className="filter-bar">
+                <label className="filter-label">Filter by Rating:</label>
+                <div className="rating-filters">
+                  {[5, 4, 3, 2, 1].map((star) => (
+                    <div key={star} className="rating-filter">
+                      <input
+                        className="rating-checkbox"
+                        type="checkbox"
+                        id={`star-${star}`}
+                        checked={selectedRatings.includes(star)}
+                        onChange={() => handleRatingChange(star)}
+                      />
+                      <label htmlFor={`star-${star}`}>
+                        {star} <Star filled={selectedRatings.includes(star)} />
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
             <div className="book-grid">
               {booksByYear[year].map((book, index) => (
                 <Book key={index} {...book} />
               ))}
             </div>
-          </div>
+          </React.Fragment>
         ))}
     </>
   );

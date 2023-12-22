@@ -6,24 +6,26 @@
     min-height: 70vh;
     /* Adjust this to control how it's centered vertically */
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 .header {
-    margin-bottom: 10px
+    padding-top: 2rem;
+    margin-bottom: 2rem
 }
 
 .subtitle {
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 3rem;
 }
 
 .icons {
     /* If your icons are from FontAwesome, for example, you might style the i elements */
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     color: rgb(58, 70, 94);
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     font-size: 3rem;
     vertical-align: top;
 }
@@ -31,6 +33,13 @@
 
 .professional-spiel li {
     /* list-style: cric; */
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    /* padding: 10px; */
+    max-width: 780px;
+    /* Maximum width for larger screens */
+    margin: 0 auto;
     font-size: 20px;
     padding: 10px;
 }
@@ -71,8 +80,8 @@
 }
 
 .custom-terminal:hover {
-    color: #209200;
-    /* Classic terminal green */
+    color: #30a800 !important;
+    /* Clasrgb(27, 117, 3)minal green */
 }
 
 .line-separator {
