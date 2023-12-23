@@ -16,9 +16,9 @@ function AboutMe() {
               <ProfileImage src={profilePic} alt="profile" />
             </div>
             <p className={styles.paragraph}>
-              A passionate Back End Software Developer 🚀 having experience in
-              building Web applications and heavy backend systems. Always
-              learning, always curious
+              A passionate Back End Software Developer 🚀 with experience in web
+              applications and heavy backend systems. Always learning, always
+              curious
             </p>
           </div>
         </section>

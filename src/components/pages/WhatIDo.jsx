@@ -17,6 +17,7 @@ function WhatIDo() {
         <i className="fas fa-feather custom-maven fa-2x"></i>
         <i className="fab fa-docker custom-docker fa-2x"></i>
         <i className="fab fa-aws custom-aws fa-2x"></i>
+        <i className="fab fa-jenkins custom-jenkins fa-2x"></i>
         {/* <i className="fas fa-terminal custom-terminal fa-2x"></i> */}
         <span className="fas fa-stack custom-terminal fa-1x">
           <i className="fas fa-solid fa-square fa-stack-2x"></i>
