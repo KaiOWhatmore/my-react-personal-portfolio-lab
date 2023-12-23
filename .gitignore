@@ -25,4 +25,5 @@ yarn-error.log*
 .songs-that-need-licensing
 .~*
 .vscode
-./firebase
+*firebase*
+
