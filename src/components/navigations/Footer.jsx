@@ -9,7 +9,7 @@ function Footer() {
       <div className="footer">
         <ul>
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/about">About Me</Link>

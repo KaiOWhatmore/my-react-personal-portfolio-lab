@@ -19,12 +19,12 @@ function Navbar() {
   return (
     <nav className={styles.navbar}>
       {/* logo */}
-      <Link to="/home" className={styles.logo}>
+      <Link to="/" className={styles.logo}>
         Kai
       </Link>
       <ul className={`${styles.navMenu} ${isActive ? styles.active : ""}`}>
         <li onClick={removeActive}>
-          <Link to="/home" className={styles.navLink}>
+          <Link to="/" className={styles.navLink}>
             Home
           </Link>
         </li>
