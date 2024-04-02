@@ -72,11 +72,11 @@ const BookGrid = () => {
       <div className="books-header">
         <h2>Books</h2>
         <p>
-          I really started to read at 23 when I returned from a three year
-          shoestring backpacking whirlwind and picked up a copy of On The Road.
-          Ever since then I've had an unhealthy addiction to reading. My
-          intersts are spread wide and far. Upon writing this I've descended
-          down the rabbit hole of macro-economics and finance.
+          At 23, I entered into a second hand book store, 
+          listlessly picked up a copy of On The Road by Jack Kerouc and commenced 
+          an intensive reading habit that has continued to this day.  
+          Completing on average a book a week, my interests are spread wide and far. 
+          My current interests are macro-economics and finance.
         </p>
         <p>
           I once heard a recruiter say reading isn't worth mentioning on a CV or
