@@ -75,12 +75,12 @@ const BookGrid = () => {
           At 23, I entered into a second hand book store, 
           listlessly picked up a copy of On The Road by Jack Kerouc and commenced 
           an intensive reading habit that has continued to this day.  
-          Completing on average a book a week, my interests are spread wide and far. 
+          Completing on average a book a week, my interests spread wide and far. 
           My current interests are macro-economics and finance.
         </p>
         <p>
-          I once heard a recruiter say reading isn't worth mentioning on a CV or
-          to a potential employer. Since I've dedicated a whole page to what I
+          I once heard a recruiter say reading isn't worth mentioning on a CV. 
+          Since I've dedicated a whole page to what I
           read, I guess I've taken his advice to heart.
         </p>
         <p>
